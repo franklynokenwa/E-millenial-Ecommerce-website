@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <main id="main-page">
+        <section class="store-intro" id="intro">
+            <nav class="flex space">
+                <div class="nav-logo">
+                    <img src="Project Files/Images/EMS.svg" alt="The logo">
+                </div>
+                <div class="nav-items flex space">
+                    <a href="#intro"><p>Intro</p></a>
+                    <a href="#about"><p>About</p></a>
+                    <a href="#shop"><p>Shop</p></a>
+                </div>
+                <div class="nav-items--cart flex">
+                    <img src="Project Files/Images/cart.svg" alt="" id="cart-icon">
+                    <p id="number-of-selected-items">0</p>
+                </div>
+            </nav>
+
+            <div class="store-intro--data flex">
+                <h1>THE <br> E-MILLENIAL <br> STORE</h1>
+                <img src="Project Files/Images/heroImage.png" alt="">
+            </div>
+            <a href="#shop"> <button class="store-intro--button"> SHOP NOW </button></a>
+        </section>
+
+        <section class="check-out" id="check-out">
+            <div class="check-out--details flex column" id="check-out--details">
+                <div class="check-out--head flex space">
+                    <h5>S/N</h5>
+                    <h5>Item</h5>
+                    <h5>Price</h5>
+                    <h5>Quantity</h5>
+                    <h3>&#8358; gg</h3>
+                </div>
+                <div class="check-out--data" id="check-out--data1">
+                    <p id="check-out--data--serial-number1"></p>
+                    <p id="check-out--data--name1"></p>
+                    <p id="check-out--data--price1"></p>
+                    <div class="check-out--quantity-change flex space" id="check-out--quantity-change1">
+                        <div class="decrease"><p id="decrease-Quantity1">-</p></div>
+                        <p id="quantity-of-items1">1</p>
+                        <div class="increase"><p id="increase-Quantity1">+</p></div>
+                    </div>
+                    <button id="remove-item1">Remove</button>
+                </div>
+                <div class="check-out--data" id="check-out--data2">
+                    <p id="check-out--data--serial-number2"></p>
+                    <p id="check-out--data--name2"></p>
+                    <p id="check-out--data--price2"></p>
+                    <div class="check-out--quantity-change flex space" id="check-out--quantity-change2">
+                        <div class="decrease"><p id="decrease-Quantity2">-</p></div>
+                        <p id="quantity-of-items2">1</p>
+                        <div class="increase"><p id="increase-Quantity2">+</p></div>
+                    </div>
+                    <button id="remove-item2">Remove</button>
+                </div>
+                <div class="check-out--data" id="check-out--data3">
+                    <p id="check-out--data--serial-number3"></p>
+                    <p id="check-out--data--name3"></p>
+                    <p id="check-out--data--price3"></p>
+                    <div class="check-out--quantity-change flex space" id="check-out--quantity-change3">
+                        <div class="decrease"><p id="decrease-Quantity3">-</p></div>
+                        <p id="quantity-of-items3">1</p>
+                        <div class="increase"><p id="increase-Quantity3">+</p></div>
+                    </div>
+                    <button id="remove-item3">Remove</button>
+                </div>
+                <div class="check-out--data" id="check-out--data4">
+                    <p id="check-out--data--serial-number4"></p>
+                    <p id="check-out--data--name4"></p>
+                    <p id="check-out--data--price4"></p>
+                    <div class="check-out--quantity-change flex space" id="check-out--quantity-change4">
+                        <div class="decrease"><p id="decrease-Quantity4">-</p></div>
+                        <p id="quantity-of-items4">1</p>
+                        <div class="increase"><p id="increase-Quantity4">+</p></div>
+                    </div>
+                    <button id="remove-item4">Remove</button>
+                </div>
+                <div class="check-out--data" id="check-out--data5">
+                    <p id="check-out--data--serial-number5"></p>
+                    <p id="check-out--data--name5"></p>
+                    <p id="check-out--data--price5"></p>
+                    <div class="check-out--quantity-change flex space" id="check-out--quantity-change5">
+                        <div class="decrease"><p id="decrease-Quantity5">-</p></div>
+                        <p id="quantity-of-items5">1</p>
+                        <div class="increase"><p id="increase-Quantity5">+</p></div>
+                    </div>
+                    <button id="remove-item5">Remove</button>
+                </div>
+                <div class="check-out--data" id="check-out--data6">
+                    <p id="check-out--data--serial-number6"></p>
+                    <p id="check-out--data--name6"></p>
+                    <p id="check-out--data--price6"></p>
+                    <div class="check-out--quantity-change flex space" id="check-out--quantity-change6">
+                        <div class="decrease"><p id="decrease-Quantity6">-</p></div>
+                        <p id="quantity-of-items6">1</p>
+                        <div class="increase"><p id="increase-Quantity6">+</p></div>
+                    </div>
+                    <button id="remove-item6">Remove</button>
+                </div>
+
+                <form action="" class="flex" id="payment-form">
+                    <input type="text" placeholder="Your name" id="name">
+                    <p class="name--error-message"></p>
+                    <input type="email" placeholder="Your email" id="email-address">
+                    <p class="email--error-message"></p>
+                    <input type="tel" placeholder="Your phone number" id="phone-number">
+                    <p class="phone--error-message"></p>
+                </form>
+                <div class="check-out--amount flex column"> 
+                    <h4>Total Amount Paid</h4>
+                    <h5 id="total-price">&#8358; 0</h5>
+                </div>
+                
+                <div class="check-out--shopping-buttons flex space">
+                    <button class="shopping-button" id="continue-shopping-button">Continue shopping</button>
+                    <button class="check-out--button" id="check-out--button">Check Out</button>
+                </div>
+            </div>
+
+        </section>
+           
+        <section class="store-info" id="about">
+            <p>E-Millenial Store is an hypothetical online store for gadgets <br>
+                we believe every 'Millenial' or 'Gen-Z' should have today. <br>
+                We've got mobile phones, laptops,smartwatches and other <br>
+                gadgets.Explore all our gadgets and choose the ones that <br> suit you.
+            </p>
+        </section>
+
+        <section class="store-gadgets" id="shop">
+            <h2>OUR GADGETS</h2>
+            <div class="store-layout1 flex space">
+                <div class="store-items1 flex column">
+                    <img src="Project Files/Images/product1.png" alt="" id="store-item-image1">
+                    <div id="store-items-price1">
+                        <div class="price flex column">
+                            <h4>Price</h4>
+                            <h2 id="price-value1"></h2>
+                        </div>
+                    </div>
+                    <h4 id="store-items1-name"></h4>
+                    <button id="store-items1-button">ADD TO CART</button>
+                    <button id="remove-from-cart1">REMOVE FROM CART</button>
+                </div>
+                <div class="store-items2 flex column">
+                    <img src="Project Files/Images/product2.png" alt="" id="store-item-image2">
+                    <div id="store-items-price2">
+                        <div class="price flex column">
+                            <h4>Price</h4>
+                            <h2 id="price-value2"></h2>
+                        </div>
+                    </div>
+                    <h4 id="store-items2-name"></h4>
+                    <button id="store-items2-button">ADD TO CART</button>
+                    <button id="remove-from-cart2">REMOVE FROM CART</button>
+                </div>
+                <div class="store-items3 flex column">
+                    <img src="Project Files/Images/product3.png" alt="" id="store-item-image3">
+                    <div id="store-items-price3">
+                        <div class="price flex column">
+                            <h4>Price</h4>
+                            <h2 id="price-value3"></h2>
+                        </div>
+                    </div>
+                    <h4 id="store-items3-name"></h4>
+                    <button id="store-items3-button">ADD TO CART</button>
+                    <button id="remove-from-cart3">REMOVE FROM CART</button>
+                </div>
+            </div>
+
+            <div class="store-layout2 flex space" >
+                <div class="store-items4 flex column">
+                    <img src="Project Files/Images/product4.png" alt="" id="store-item-image4">
+                    <div id="store-items-price4">
+                        <div class="price flex column">
+                            <h4>Price</h4>
+                            <h2 id="price-value4"></h2>
+                        </div>
+                    </div>
+                    <h4 id="store-items4-name"></h4>
+                    <button id="store-items4-button">ADD TO CART</button>
+                    <button id="remove-from-cart4">REMOVE FROM CART</button>
+                </div>
+                <div class="store-items5 flex column">
+                    <img src="Project Files/Images/product5.png" alt="" id="store-item-image5">
+                    <div id="store-items-price5">
+                        <div class="price flex column">
+                            <h4>Price</h4>
+                            <h2 id="price-value5"></h2>
+                        </div>
+                    </div>
+                    <h4 id="store-items5-name"></h4>
+                    <button id="store-items5-button">ADD TO CART</button>
+                    <button id="remove-from-cart5">REMOVE FROM CART</button>
+                </div>
+                <div class="store-items6 flex column">
+                    <img src="Project Files/Images/product6.png" alt="" id="store-item-image6">
+                    <div id="store-items-price6">
+                        <div class="price flex column">
+                            <h4>Price</h4>
+                            <h2 id="price-value6"></h2>
+                        </div>
+                    </div>
+                    <h4 id="store-items6-name"></h4>
+                    <button id="store-items6-button">ADD TO CART</button>
+                    <button id="remove-from-cart6">REMOVE FROM CART</button>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-data flex space">
+                <img src="Project Files/Images/EMS.svg" alt="">
+                <p>Designed and crafted by a Frontend Ninja</p>
+            </div>
+        </footer>
+    </main>
+
+<script type="module" src="script.js"></script>
+<script src="https://js.paystack.co/v1/inline.js"></script> 
+
+</body>
+</html>

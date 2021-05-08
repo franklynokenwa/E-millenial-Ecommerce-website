@@ -148,12 +148,12 @@ storeItems4Name.textContent = products[3].name;
 storeItems5Name.textContent = products[4].name;
 storeItems6Name.textContent = products[5].name;
 
-priceValue1.textContent = products[0].price;
-priceValue2.textContent = products[1].price;
-priceValue3.textContent = products[2].price;
-priceValue4.textContent = products[3].price;
-priceValue5.textContent = products[4].price;
-priceValue6.textContent = products[5].price;
+priceValue1.textContent = formatter.format(products[0].price);
+priceValue2.textContent = formatter.format(products[1].price);
+priceValue3.textContent = formatter.format(products[2].price);
+priceValue4.textContent = formatter.format(products[3].price);
+priceValue5.textContent = formatter.format(products[4].price);
+priceValue6.textContent = formatter.format(products[5].price);
 
 // Event Listeners
 shop.addEventListener('mouseover', hoverOnProduct);

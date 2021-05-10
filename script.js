@@ -73,6 +73,13 @@ const checkOutData4 = document.getElementById('check-out--data4');
 const checkOutData5 = document.getElementById('check-out--data5');
 const checkOutData6 = document.getElementById('check-out--data6');
 
+const orderSummaryData1 = document.getElementById('order-summary--data1');
+const orderSummaryData2 = document.getElementById('order-summary--data2');
+const orderSummaryData3 = document.getElementById('order-summary--data3');
+const orderSummaryData4 = document.getElementById('order-summary--data4');
+const orderSummaryData5 = document.getElementById('order-summary--data5');
+const orderSummaryData6 = document.getElementById('order-summary--data6');
+
 
 const checkOutDataSerialNumber1 = document.getElementById('check-out--data--serial-number1');
 const checkOutDataSerialNumber2 = document.getElementById('check-out--data--serial-number2');
@@ -81,6 +88,13 @@ const checkOutDataSerialNumber4 = document.getElementById('check-out--data--seri
 const checkOutDataSerialNumber5 = document.getElementById('check-out--data--serial-number5');
 const checkOutDataSerialNumber6 = document.getElementById('check-out--data--serial-number6');
 
+const orderSummaryDataSerialNumber1 = document.getElementById('order-summary--data--serial-number1');
+const orderSummaryDataSerialNumber2 = document.getElementById('order-summary--data--serial-number2');
+const orderSummaryDataSerialNumber3 = document.getElementById('order-summary--data--serial-number3');
+const orderSummaryDataSerialNumber4 = document.getElementById('order-summary--data--serial-number4');
+const orderSummaryDataSerialNumber5 = document.getElementById('order-summary--data--serial-number5');
+const orderSummaryDataSerialNumber6 = document.getElementById('order-summary--data--serial-number6');
+
 
 const checkOutDataName1 = document.getElementById('check-out--data--name1');
 const checkOutDataName2 = document.getElementById('check-out--data--name2');
@@ -88,6 +102,14 @@ const checkOutDataName3 = document.getElementById('check-out--data--name3');
 const checkOutDataName4 = document.getElementById('check-out--data--name4');
 const checkOutDataName5 = document.getElementById('check-out--data--name5');
 const checkOutDataName6 = document.getElementById('check-out--data--name6');
+
+
+const orderSummaryDataName1 = document.getElementById('order-summary--data--name1');
+const orderSummaryDataName2 = document.getElementById('order-summary--data--name2');
+const orderSummaryDataName3 = document.getElementById('order-summary--data--name3');
+const orderSummaryDataName4 = document.getElementById('order-summary--data--name4');
+const orderSummaryDataName5 = document.getElementById('order-summary--data--name5');
+const orderSummaryDataName6 = document.getElementById('order-summary--data--name6');
 
 
 const checkOutDataPrice1 = document.getElementById('check-out--data--price1');
@@ -104,6 +126,15 @@ const quantityOfItems3 = document.getElementById('quantity-of-items3');
 const quantityOfItems4 = document.getElementById('quantity-of-items4');
 const quantityOfItems5 = document.getElementById('quantity-of-items5');
 const quantityOfItems6 = document.getElementById('quantity-of-items6');
+
+
+const orderSummaryQuantity1 = document.getElementById('order-summary--quantity1');
+const orderSummaryQuantity2 = document.getElementById('order-summary--quantity2');
+const orderSummaryQuantity3 = document.getElementById('order-summary--quantity3');
+const orderSummaryQuantity4 = document.getElementById('order-summary--quantity4');
+const orderSummaryQuantity5 = document.getElementById('order-summary--quantity5');
+const orderSummaryQuantity6 = document.getElementById('order-summary--quantity6');
+
 
 const removeItem1 = document.getElementById('remove-item1');
 const removeItem2 = document.getElementById('remove-item2');
@@ -128,17 +159,20 @@ const totalPrice = document.getElementById('total-price');
 const mainPage = document.getElementById('main-page');
 
 
+
+
 let numberOfSelectedItems = document.getElementById('number-of-selected-items');
 
 const storeItemImages = ['store-item-image1','store-item-image2','store-item-image3','store-item-image4','store-item-image5','store-item-image6'];
 
+const orderSummary = document.getElementById('order-summary');
+const summaryButton = document.getElementById('summary-button');
+
 const formatter = new Intl.NumberFormat('en-NG', {
     style: 'currency',
     currency: 'NGN',
-    minimumFractionDigits: 2
-  })
-
-
+    minimumFractionDigits: 0
+  });
 
 
 storeItems1Name.textContent = products[0].name;
@@ -173,7 +207,10 @@ checkOutQuantityChange6.addEventListener('click', changeQuantityOfItems6);
 
 checkOutDetails.addEventListener('click', removeItemFromCheckOut);
 
-mainPage.addEventListener('click', getTotalPriceOfSelectedItems)
+mainPage.addEventListener('click', getTotalPriceOfSelectedItems);
+
+summaryButton.addEventListener('click', reloadPage);
+
 
     var total1 = 0;
     var total2 = 0;
@@ -199,6 +236,11 @@ mainPage.addEventListener('click', getTotalPriceOfSelectedItems)
 
     //Functions
 
+    //This function refreshes the page after the check out was successful
+    function reloadPage(){
+    window.location.reload();
+    }
+
 
     //This function is used to get the totel price of items that were added to the cart
 
@@ -221,10 +263,8 @@ mainPage.addEventListener('click', getTotalPriceOfSelectedItems)
             currentNumberOfSelectedItems1= parseInt(quantityOfItems1.textContent);
             amount1 = parseInt(checkOutDataPrice1.textContent);
             total1 = parseInt(amount1 * currentNumberOfSelectedItems1);
-            final = total1 +total2 + total3 + total4 + total5 + total6;            
-            
+            final = total1 +total2 + total3 + total4 + total5 + total6;
         }
-        
         
         if ((event.target.id) != 'store-items2-button') {
             currentNumberOfSelectedItems2 = 0;
@@ -328,8 +368,7 @@ mainPage.addEventListener('click', getTotalPriceOfSelectedItems)
         }
         if ((event.target.id) == 'remove-item1') {
             total1 = 0 ;  
-            final = total1 +total2 + total3 + total4 + total5 + total6;
-    
+            final = total1 +total2 + total3 + total4 + total5 + total6;    
         }
         if ((event.target.id) == 'remove-item2') {
             total2 = 0 ;
@@ -356,7 +395,7 @@ mainPage.addEventListener('click', getTotalPriceOfSelectedItems)
             final = total1 +total2 + total3 + total4 + total5 + total6;
 
         }
-        totalPrice.textContent = final;
+        totalPrice.textContent = formatter.format(final);
         console.log(final);
     }
 
@@ -682,8 +721,12 @@ function inputOrRemoveDataFromCart() {
 
 }
 
+
+
 const checkOutButton = document.getElementById('check-out--button');
-checkOutButton.addEventListener('click', payWithPaystack );
+
+checkOutButton.addEventListener('click', upDateOrderSummary);
+checkOutButton.addEventListener('click', payWithPaystack);
 
 const paymentForm = document.getElementById('payment-form');
 paymentForm.addEventListener("submit", payWithPaystack, false);
@@ -700,8 +743,159 @@ function payWithPaystack() {
     },
     callback: function(response){
       let message = 'Payment complete! Reference: ' + response.reference;
-      alert(message);
+      orderSummary.style.display = 'block';
     }
   });
   handler.openIframe();
 }
+
+function upDateOrderSummary(){
+    checkOut.style.display = 'none';
+    orderSummaryDataSerialNumber1.textContent = checkOutDataSerialNumber1.textContent;
+    orderSummaryDataName1.textContent = checkOutDataName1.textContent;
+    orderSummaryQuantity1.textContent = quantityOfItems1.textContent;
+
+    orderSummaryDataSerialNumber2.textContent = checkOutDataSerialNumber2.textContent;
+    orderSummaryDataName2.textContent = checkOutDataName2.textContent;
+    orderSummaryQuantity2.textContent = quantityOfItems2.textContent;
+
+    orderSummaryDataSerialNumber3.textContent = checkOutDataSerialNumber3.textContent;
+    orderSummaryDataName3.textContent = checkOutDataName3.textContent;
+    orderSummaryQuantity3.textContent = quantityOfItems3.textContent;
+
+    orderSummaryDataSerialNumber4.textContent = checkOutDataSerialNumber4.textContent;
+    orderSummaryDataName4.textContent = checkOutDataName4.textContent;
+    orderSummaryQuantity4.textContent = quantityOfItems4.textContent;
+
+    orderSummaryDataSerialNumber5.textContent = checkOutDataSerialNumber5.textContent;
+    orderSummaryDataName5.textContent = checkOutDataName5.textContent;
+    orderSummaryQuantity5.textContent = quantityOfItems5.textContent;
+
+    orderSummaryDataSerialNumber6.textContent = checkOutDataSerialNumber6.textContent;
+    orderSummaryDataName6.textContent = checkOutDataName6.textContent;
+    orderSummaryQuantity6.textContent = quantityOfItems6.textContent;
+
+}
+
+mainPage.addEventListener('click', displaySummaryOfSelectedItems);
+
+
+function displaySummaryOfSelectedItems() {
+    
+    if ((event.target.id) == 'store-items1-button') {
+        orderSummaryData1.style.display = 'flex';    
+    }
+    if ((event.target.id) == 'store-items2-button') {
+        orderSummaryData2.style.display = 'flex';       
+    }
+    if ((event.target.id) == 'store-items3-button') {
+        orderSummaryData3.style.display = 'flex';       
+    }
+    if ((event.target.id) == 'store-items4-button') {
+        orderSummaryData4.style.display = 'flex';       
+    }
+    if ((event.target.id) == 'store-items5-button') {
+        orderSummaryData5.style.display = 'flex';       
+    }
+    if ((event.target.id) == 'store-items6-button') {
+        orderSummaryData6.style.display = 'flex';       
+    }
+}
+
+
+
+
+const nameErrorMessage = document.getElementById('name--error-message');
+const emailErrorMessage = document.getElementById('email--error-message');
+const phoneErrorMessage = document.getElementById('phone--error-message');
+
+const nameError = document.getElementById('name-error');
+const emailError = document.getElementById('email-error');
+const phoneError = document.getElementById('phone-error');
+
+const name = document.getElementById('name');
+const emailAddress = document.getElementById('email-address');
+const phoneNumber = document.getElementById('phone-number');
+
+let pattern = new RegExp(/[~`!#$%\^&*+=\-\[\]\\';,/{}|\\":<>\?]/);
+
+
+
+name.addEventListener('blur', formValidation);
+emailAddress.addEventListener('blur', formValidation);
+phoneNumber.addEventListener('blur', formValidation);
+
+
+function formValidation() {
+    
+    const regex = new RegExp(/[^0-9]/, 'g');
+    
+    if(name.value == '' || name.value == null )  {
+        nameErrorMessage.textContent = 'Please enter your name';
+        name.style.border = '2px solid red';
+        checkOutButton.disabled = true;
+
+                
+    }else{
+        nameErrorMessage.textContent ='';
+        name.style.border = '2px solid green';
+        checkOutButton.disabled = false;
+        let customerName = document.getElementById('customer-name');
+        customerName.textContent = name.value;
+
+                
+    }
+    
+    if (emailAddress.value=='' || emailAddress.value == null) {  
+        emailErrorMessage.textContent = 'Please enter your email address';
+        emailAddress.style.border = '2px solid red'; 
+        checkOutButton.disabled = true;
+
+                
+    }else if((emailAddress.value.indexOf('@') == -1) && (emailAddress.value !== '')){
+        emailErrorMessage.textContent = 'Invalid email';
+        emailAddress.style.border = '2px solid red'; 
+        checkOutButton.disabled = true;
+
+
+    }
+    else{
+        emailErrorMessage.textContent = '';
+        emailAddress.style.border = '2px solid green'; 
+        checkOutButton.disabled = false;
+                
+    }
+
+    if (phoneNumber.value == '' || phoneNumber.value == null) { 
+        phoneErrorMessage.textContent = 'Please enter your phone number';
+        phoneNumber.style.border = '2px solid red';  
+        checkOutButton.disabled = true;
+ 
+                
+    }
+    else if ((phoneNumber.value.match(regex))) { 
+        phoneErrorMessage.textContent = 'Phone number can only be numbers';
+        phoneNumber.style.border = '2px solid red';
+        checkOutButton.disabled = true;
+
+                
+    }
+    else if(phoneNumber.value.length < 11) { 
+        phoneNumber.style.border = '2px solid red';
+        phoneErrorMessage.textContent = 'Phone number cannot be less than 11 characters';
+        checkOutButton.disabled = true;
+
+
+              
+    }else {
+        phoneErrorMessage.textContent = '';
+        phoneNumber.style.border = '2px solid green';   
+
+    }
+    
+    
+}
+
+let customerName = document.getElementById('customer-name');
+console.log(name.value);
+customerName.textContent = name.value;

@@ -47,8 +47,9 @@ nav{
     cursor: pointer;
 }
 .nav-items--cart p{
-    font-size: 2vw;
-    color: black;
+    font-size: 2.7vw;
+    position: relative;
+    top: -1.5rem;
 }
 .store-intro{
     background-color: #ffcd9e;
@@ -92,7 +93,6 @@ nav{
     display: none;
 }
 .check-out--details{
-    background-color: red;
     color: black;
     width: 60%;
     position: relative;
@@ -134,7 +134,7 @@ nav{
     cursor: pointer;
     background-color: #ff9a3d;
 }
-.check-out--data{
+.check-out--data, .order-summary--data{
     display: flex;
     justify-content: space-around;
 }
@@ -156,6 +156,20 @@ nav{
 #check-out--data6{
     display: none;
 }
+.check-out--data--serial-number--width{
+    width: 1.2rem;
+}
+.check-out--data--name--width{
+    width:8rem;
+}
+.check-out--data--price-width{
+    width: 5rem;
+}
+.quantity-of-items-width{
+    width: 1.2rem;
+    text-align: center;
+}
+
 
 form{
     flex-direction: column;
@@ -172,6 +186,16 @@ form input{
     top: -1.5rem;
     margin-bottom: -1rem;
     color: red;
+    
+}
+.name-error{
+    border: 2px solid red;
+}
+.email-error{
+    border: 2px solid red;
+}
+.phone-error{
+    border: 2px solid red;
 }
 
 .check-out--amount{
@@ -197,7 +221,7 @@ form input{
     position: relative;
     top: -5rem;
 }
-.check-out--shopping-buttons button{
+.check-out--shopping-buttons button, .order-summary--details button{
     width:10rem;
     height: 3rem;
     border: none;
@@ -212,6 +236,76 @@ form input{
     background-color: #ff7a00;
     color: white;
 }
+.check-out--button:disabled {
+    background: gray;
+  }
+.customer-name{
+    color: #ff7a00;
+}
+.order-summary{
+    background-color: rgba(0,0,0,0.5);
+    height: 140rem;
+    width: 100%;
+    position: absolute;  
+    top: 0rem;  
+    padding-top: 2rem;    
+    display: none;
+}
+.order-summary--details{
+    background-color: white;
+    color: black;
+    width: 60%;
+    position: relative;
+    left: 20%;
+    top: 0;
+    
+}
+.order-summary--details h4{
+    width: 12rem;
+    margin: 0 auto;
+    font-size: 2rem;
+}
+.order-summary--details h6{
+    width: 43rem;
+    margin: 0 auto;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+
+.order-summary--details img{
+    width: 15rem;
+    margin: 0 auto;
+}
+.order-summary--details button{
+    background-color: #ff7a00;
+    color: white;
+    position: relative;
+    margin: 3rem auto;
+
+}
+.order-summary--data p{
+    color: black;
+}
+#order-summary--data1{
+    display: none;
+}
+#order-summary--data2{
+    display: none;
+}
+#order-summary--data3{
+    display: none;
+}
+#order-summary--data4{
+    display: none;
+}
+#order-summary--data5{
+    display: none;
+}
+#order-summary--data6{
+    display: none;
+}
+
 
 .store-info{
     background-color: black;
@@ -252,6 +346,8 @@ form input{
 .store-gadgets h4{
     font-size: 2vw;
     font-weight: 600;
+    width: 15rem;
+    text-align: center;
 }
 
 .store-gadgets button{
@@ -284,8 +380,9 @@ form input{
 .price h2{
     font-weight: 700;
     position: relative;
-    width: 8rem;
-    margin: 3rem auto
+    width: 13.8rem;
+    margin: 3rem auto;
+    margin-left: 1rem;
 }
 .price h4{
     width: 5rem;

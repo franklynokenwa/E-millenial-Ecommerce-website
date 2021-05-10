@@ -2,37 +2,37 @@ var products = [{
         index: 1,
         id: 'p1',
         name: 'Samsung TV',
-        price: '5'
+        price: '500000'
     },
     {
         index: 2,
         id: 'p2',
         name: 'Pixel 4a',
-        price: '2'
+        price: '250000'
     },
     {
         index: 3,
         id: 'p3',
         name: 'PS 5',
-        price: '3'
+        price: '300000'
     },
     {
         index: 4,
         id: 'p4',
         name: 'MacBook Air',
-        price: '8'
+        price: '800000'
     },
     {
         index: 5,
         id: 'p5',
         name: 'Apple Watch',
-        price: '9'
+        price: '95000'
     },
     {
         index: 6,
         id: 'p6',
         name: 'Air Pods',
-        price: '7'
+        price: '75000'
     },
 
 ]

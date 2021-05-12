@@ -76,6 +76,7 @@ nav{
     width: 35rem;
     position: relative;
     top: -2rem;
+    object-fit: contain;
 }
 .store-intro--data h1{
     color: #ff7a00;
@@ -182,7 +183,7 @@ form input{
 }
 .name--error-message, .email--error-message, .phone--error-message{
     position: relative;
-    left: 19rem;
+    left: 16rem;
     top: -1.5rem;
     margin-bottom: -1rem;
     color: red;
@@ -237,7 +238,8 @@ form input{
     color: white;
 }
 .check-out--button:disabled {
-    background: gray;
+    background: rgb(235,235,228);
+    pointer-events: none;
   }
 .customer-name{
     color: #ff7a00;

@@ -1,0 +1,441 @@
+@media screen and (max-width: 768px) {
+    html, body {
+        overflow-x: hidden;
+    }
+    .nav-items a{
+        font-size: 1.5rem;
+    }
+    .store-intro--data{
+        margin-top: 2rem;
+        margin: 2rem;
+    }
+
+    .store-intro--data img{
+        width: 27rem;
+        
+    }
+    .store-intro button{
+        margin: 2rem auto;
+        left: 40%;
+    }
+    .nav-items--cart p{
+        font-size: 2.7vw;
+        top: 0.2rem;
+    }
+    .store-gadgets button{
+        width: 12rem;
+    }
+    .store-gadgets h4{
+        width: 11rem;
+    }
+    .store-gadgets h2{
+        text-align: center;
+        
+    }
+    .check-out--head{
+        margin-left: 1rem;
+        width: 27rem;
+    }
+    .check-out--data button{
+        width: 5rem;
+        
+    }
+    .check-out--details, .order-summary--details{
+        width: 80%;
+        left: 10%;
+    }
+    .check-out--data{
+        width:38rem ;
+    }
+    .order-summary--data{
+        width:39rem ;
+    }
+    .check-out--amount h5{
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+    .order-summary--head{
+        width: 36rem;
+    }
+    .quantity{
+        position: relative;
+        left: 4rem;
+    } 
+    .order-summary--details h6{
+        width: 37rem;
+        font-size: 2.4vw;
+    }
+    .footer-data{
+        left: -0.7rem
+    }
+    .name--error-message, .email--error-message, .phone--error-message{
+        left: 13rem;        
+    }
+    .check-out--amount h5{
+        font-size: 1.8rem;
+        font-weight: 700;
+    }
+    
+}
+
+@media screen and (max-width: 425px) { 
+    .nav-logo{
+        display: none;
+    }
+    .nav-items--cart{
+        height: 4rem;
+    }
+    .nav-items--cart p{
+        font-size: 25px;
+        top: -1rem;
+    }
+    .nav-items{
+        width: 17rem;
+    }
+    .nav-items a{
+        font-size: 17px;
+    }
+    .store-intro--data{
+        width: 25rem;
+        margin-left: 1rem;
+    }
+    .store-intro--data h1{
+        margin-left: 2rem;
+        width: 17rem;
+        font-size: 25px;
+    }
+    .store-intro--data img{
+        width: 18rem;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+    }
+    .store-intro button{
+        left: 20%;
+        font-size: large;
+    }
+    .store-info p{
+        position: relative;
+        left: -13rem;
+        font-size: 13px;
+    }
+    .store-info{
+        height: 10rem;
+    }
+    .store-gadgets h2{
+        font-size: 1.7rem;        
+    }
+    .store-items3{
+        position: relative;
+        top: 20rem;
+        left: -11rem;
+    }
+    .store-layout1{
+        margin-bottom: 20rem;
+        
+    }
+    .store-items1{
+        margin-left: 10rem;
+        margin-right: 1rem;
+    }
+    .store-gadgets button{
+        width: 9rem;
+        font-size: 0.7rem;
+    }
+    .store-items4{
+        position: relative;
+        top: -17.6rem;
+        left: 4.5rem;
+    }
+    .store-items5{
+        position: relative;
+        top: 1.5rem;
+        left: -6.5rem;
+    }
+    .store-items6{
+        position: relative;
+        top: 1.5rem;
+        left: -5.5rem;
+    }
+    .store-gadgets h4{
+        width: 11rem;
+        position: relative;
+        left: -1rem;
+        font-size: 1rem;
+    }
+    .footer-data{
+        left: 1.2rem
+    }
+    .footer-data p{
+        margin-left: 2rem;
+    }
+    .check-out--details, .order-summary--details{
+        width: 90%;
+        left: 5%;
+    }
+    .check-out--head{
+        margin-left: 1rem;
+        width: 17rem;
+    }
+    .check-out--data{
+        width:22rem ;
+        margin-left: 0.9rem;
+    }
+    .check-out--data p{
+        font-size: 14px;
+    }
+    .check-out--data button{
+        position: relative;
+        left: 0.8rem;
+    }
+    form input{
+        width: 22rem;
+    }
+    form{
+        margin-bottom: 2rem;
+    }
+    .check-out--amount h4{
+        font-size: 1rem;
+    }
+    .check-out--amount h5{
+        font-size: 1.5rem;
+    }
+    .order-summary--details h6{
+        width: 23rem;
+        font-size: 1rem;
+    }
+    .order-summary--details img{
+        width: 8rem;
+    }
+    .order-summary--head{
+        width: 20rem;
+    }
+    .order-summary--data{
+        width:24rem ;
+    }
+    .name--error-message, .email--error-message, .phone--error-message{
+        left: 4rem;        
+    }
+}
+
+@media screen and (max-width: 375px) { 
+    .store-intro--data{
+        display: block;
+    }
+    .store-intro--data h1{
+        margin-left: 4rem;
+        font-size: 2rem;
+    }
+    .store-intro button{
+        left: 12%;
+        
+    }
+    .store-intro--data img{
+        left: 2rem;
+    }
+    .store-info p{
+       top: -3rem;
+        left: -12rem;
+        font-size: 5vw;
+        width: 18rem;
+        
+    }
+    .store-layout1, .store-layout2{
+        display: block;
+    }
+    .store-items1{
+        margin-left: 0.6rem;
+        margin-bottom: 3rem;
+        width: 20rem;
+    }
+    .store-items2{
+        margin-left: 0.6rem;
+        margin-bottom: 3rem;
+        width: 20rem;
+    }
+    .store-items3{
+        top: 0rem;
+        left: 0.6rem;
+        margin-bottom: 3rem;
+        width: 20rem;
+    }
+    .store-gadgets button{
+        width: 9rem;
+        font-size: 0.7rem;
+    }
+    .store-items4{
+        position: relative;
+        top: -17rem;
+        left: 0.6rem;
+        margin-bottom: 3rem;
+        width: 20rem;
+    }
+    .store-items5{
+        position: relative;
+        top: -16rem;
+        left: 0.6rem;
+        margin-bottom: 3rem;
+        width: 20rem;
+    }
+    .store-items6{
+        position: relative;
+        top: -16rem;
+        left: 0.6rem;
+        width: 20rem;
+        margin-bottom: -2rem;
+    }
+    .store-gadgets button{
+        width: 16rem;
+        font-size: 0.7rem;
+    }
+    .store-gadgets h4{
+        left: 1.5rem;
+        font-size: 1.5rem;
+    }
+    footer{
+        position: relative;
+        margin-top: -14rem;
+    }
+    .check-out--details, .order-summary--details{
+        width: 95%;
+        left: 3%;
+    }
+    .check-out--head{
+        margin-left: 1rem;
+        width: 13.5rem;
+    }
+    .check-out--data{
+        width:17rem ;
+        margin-left: 0.9rem;
+    }
+    .check-out--data p{
+        font-size: 12px;
+    }
+    form input{
+        width: 18rem;
+    }
+    .name--error-message, .email--error-message, .phone--error-message{
+        left: 2rem;        
+    }
+    .check-out--shopping-buttons button{
+        margin-left: 6rem;
+    }
+    .check-out--shopping-buttons{
+        flex-direction: column;
+    }
+    .shopping-button{
+        margin-bottom: 2rem;
+        
+    }
+    .order-summary--details img{
+        width: 6rem;
+    }
+    .order-summary--head{
+        width: 14rem;
+    }
+    .order-summary--data{
+        width:17rem ;
+    }
+    .order-summary--details h6{
+        width: 20rem;
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+    .footer-data{
+        position: relative;
+        left: 0.6rem;
+    }
+    .footer-data p{
+        width: 10rem;
+    }
+}
+
+@media screen and (max-width: 320px) { 
+    .store-intro--data{
+        display: block;
+    }
+    .store-intro--data h1{
+        margin-left: 4rem;
+        font-size: 2rem;
+    }
+    .store-intro button{
+        left: 8%;
+        
+    }
+    .store-info p{
+        left: -14rem;        
+    }
+    .store-layout1, .store-layout2{
+        display: block;
+    }
+    .store-items1{
+        margin-left: -1rem;
+        
+    }
+    .store-items2{
+        margin-left: -1rem;
+        
+    }
+    .store-items3{
+        left: -1rem;
+    }
+    .store-gadgets button{
+        width: 9rem;
+        font-size: 0.7rem;
+    }
+    .store-items4{
+        left: -1rem;
+    }
+    .store-items5{
+        left: -1rem;
+    }
+    .store-items6{
+        left: -1rem;
+    }
+    .store-gadgets button{
+        width: 16rem;
+        font-size: 0.7rem;
+    }
+    .store-gadgets h4{
+        left: 1.5rem;
+        font-size: 1.5rem;
+    }
+    footer{
+        position: relative;
+        margin-top: -14rem;
+    }
+    .check-out--details, .order-summary--details{
+        width: 95%;
+        left: 3%;
+    }
+    .check-out--head{
+        margin-left: 1rem;
+        width: 13.5rem;
+    }
+    .check-out--data{
+        width:17rem ;
+        margin-left: 0.9rem;
+    }
+    .check-out--data p{
+        font-size: 12px;
+    }
+    form input{
+        width: 18rem;
+    }
+    .name--error-message, .email--error-message, .phone--error-message{
+        left: 0.4rem;        
+    }
+    .check-out--shopping-buttons button{
+        margin-left: 4rem;
+    }
+    .check-out--shopping-buttons{
+        flex-direction: column;
+    }
+    .shopping-button{
+        margin-bottom: 2rem;
+        
+    }
+    .order-summary--details h6{
+        
+        margin-left: 0.4rem;
+    }
+}

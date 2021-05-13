@@ -211,7 +211,7 @@ form input{
 }
 .check-out--amount h5{
     font-size: 2vw;
-    font-weight: 500;
+    font-weight: 700;
 }
 .check-out--shopping-buttons{
     width: 25rem;
@@ -402,4 +402,12 @@ footer{
     top: 5rem;
     left: -6rem
 }
+button:hover, #cart-icon:hover{
+    filter: drop-shadow(0px 1px 3px red);
+    transform: translate(0px,-2px);
+}
+.nav-items a:hover{
+    color: #ff7a00;
+}
+
 

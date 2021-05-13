@@ -1,16 +1,6 @@
 import products from './ProductsList.js';
 
-console.log(products);
-
-const storeItemImage1 = document.getElementById('store-item-image1');
-const storeItemImage2 = document.getElementById('store-item-image2');
-const storeItemImage3 = document.getElementById('store-item-image3');
-const storeItemImage4 = document.getElementById('store-item-image4');
-const storeItemImage5 = document.getElementById('store-item-image5');
-const storeItemImage6 = document.getElementById('store-item-image6');
-
 const shop = document.getElementById('shop');
-const p = document.getElementById('p');
 
 const storeItemsPrice1 = document.getElementById('store-items-price1');
 const storeItemsPrice2 = document.getElementById('store-items-price2');
@@ -56,15 +46,6 @@ const continueShoppingButton = document.getElementById('continue-shopping-button
 
 const cartIcon = document.getElementById('cart-icon');
 const checkOut = document.getElementById('check-out');
-
-const checkOutData = document.getElementById('check-out--data');
-const checkOutDataSerialNumber = document.getElementById('check-out--data--serial-number');
-const checkOutDataName = document.getElementById('check-out--data--name');
-const checkOutDataPrice = document.getElementById('check-out--data--price');
-const decreaseQuantity = document.getElementById('decrease-Quantity');
-const increaseQuantity = document.getElementById('increase-Quantity');
-const quantityOfItems = document.getElementById('quantity-of-items');
-const removeItem = document.getElementById('remove-item');
 
 const checkOutData1 = document.getElementById('check-out--data1');
 const checkOutData2 = document.getElementById('check-out--data2');
@@ -136,14 +117,6 @@ const orderSummaryQuantity5 = document.getElementById('order-summary--quantity5'
 const orderSummaryQuantity6 = document.getElementById('order-summary--quantity6');
 
 
-const removeItem1 = document.getElementById('remove-item1');
-const removeItem2 = document.getElementById('remove-item2');
-const removeItem3 = document.getElementById('remove-item3');
-const removeItem4 = document.getElementById('remove-item4');
-const removeItem5 = document.getElementById('remove-item5');
-const removeItem6 = document.getElementById('remove-item6');
-
-
 const checkOutQuantityChange1 = document.getElementById('check-out--quantity-change1');
 const checkOutQuantityChange2 = document.getElementById('check-out--quantity-change2');
 const checkOutQuantityChange3 = document.getElementById('check-out--quantity-change3');
@@ -151,14 +124,9 @@ const checkOutQuantityChange4 = document.getElementById('check-out--quantity-cha
 const checkOutQuantityChange5 = document.getElementById('check-out--quantity-change5');
 const checkOutQuantityChange6 = document.getElementById('check-out--quantity-change6');
 
-const increaseQuantity1 = document.getElementById('increase-Quantity1');
-const decreaseQuantity1 = document.getElementById('decrease-Quantity1');
-
 const totalPrice = document.getElementById('total-price');
 
 const mainPage = document.getElementById('main-page');
-
-
 
 
 let numberOfSelectedItems = document.getElementById('number-of-selected-items');
@@ -168,6 +136,7 @@ const storeItemImages = ['store-item-image1','store-item-image2','store-item-ima
 const orderSummary = document.getElementById('order-summary');
 const summaryButton = document.getElementById('summary-button');
 
+// Class for formatting the price to Nigerian naira with o decimal place
 const formatter = new Intl.NumberFormat('en-NG', {
     style: 'currency',
     currency: 'NGN',
@@ -181,6 +150,8 @@ storeItems3Name.textContent = products[2].name;
 storeItems4Name.textContent = products[3].name;
 storeItems5Name.textContent = products[4].name;
 storeItems6Name.textContent = products[5].name;
+
+// Formats the price to Nigerian naira with o decimal place
 
 priceValue1.textContent = formatter.format(products[0].price);
 priceValue2.textContent = formatter.format(products[1].price);
@@ -242,7 +213,7 @@ summaryButton.addEventListener('click', reloadPage);
     }
 
 
-    //This function is used to get the totel price of items that were added to the cart
+    //This function is used to get the total price of items that were added to the cart
 
     function getTotalPriceOfSelectedItems() {
        
@@ -400,6 +371,8 @@ summaryButton.addEventListener('click', reloadPage);
     }
 
 
+//This function removes an item from the check out when the remove button is clicked, it also updates the number of items remaining in the check out
+
 function removeItemFromCheckOut() {
     if ((event.target.id) == 'remove-item1') {
         checkOutData1.style.display = 'none';
@@ -446,6 +419,7 @@ function removeItemFromCheckOut() {
     }
 }
 
+//This function increases or decreases the quantity of items added to the check out for each of the products listed in the store
 
 function changeQuantityOfItems1() {
     if (((event.target.textContent) == '+') && ((event.target.id) == 'increase-Quantity1')) {
@@ -549,19 +523,22 @@ function changeQuantityOfItems6() {
     }
 }
 
+//This function hides the check out to enable the customer add more items to the check out
 
 function continueShopping() {
     checkOut.style.display = 'none';
 
 }
 
+
+//This function removes the check out modal from the page
 function removeCheckOutModalFromThePage() {
     if (event.target.id == 'check-out') {
         checkOut.style.display = 'none';
     }
 }
 
-
+//This function displays the check out 
 function displayCheckOut() {
     if (numberOfSelectedItems.textContent >= 1) {
         checkOut.style.display = 'block';
@@ -571,7 +548,7 @@ function displayCheckOut() {
     }
 }
 
-
+//This function increases or decreases the number of items in the cart
 function increaseNumberOfItemsInTheCart() {
 
     if ((event.target.textContent) == 'ADD TO CART') {
@@ -582,6 +559,7 @@ function increaseNumberOfItemsInTheCart() {
     }
 }
 
+//This function displays the prices when there is a hover on a product
 function hoverOnProduct() {
     if (event.target.id == storeItemImages[0] ) {
         storeItemsPrice1.style.display = 'block';
@@ -603,6 +581,9 @@ function hoverOnProduct() {
     }
 
 }
+
+//This function hides the prices when there is a hover out of a product
+
 function hoverOutOfProduct() {
     if (event.target.id == storeItemImages[0] ) {
         storeItemsPrice1.style.display = 'none';
@@ -624,6 +605,7 @@ function hoverOutOfProduct() {
     }
 }
 
+//This function inputs or removes data about a product from the  (e.g name, serial number)
 
 function inputOrRemoveDataFromCart() {
      if ((event.target.id) == 'store-items1-button') {
@@ -731,9 +713,12 @@ checkOutButton.addEventListener('click', payWithPaystack);
 const paymentForm = document.getElementById('payment-form');
 paymentForm.addEventListener("submit", payWithPaystack, false);
 
+
+//This function handles the paystack test payment
+
 function payWithPaystack() {
   let handler = PaystackPop.setup({
-    key: 'pk_test_84811b77d7026d47cf5f7ef61758a7084fb87f46', // Replace with your public key
+    key: 'pk_test_84811b77d7026d47cf5f7ef61758a7084fb87f46', 
     email: document.getElementById("email-address").value,
     amount: final * 100,
     ref: ''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
@@ -741,13 +726,14 @@ function payWithPaystack() {
     onClose: function(){
       alert('Window closed.');
     },
-    callback: function(response){
-      let message = 'Payment complete! Reference: ' + response.reference;
+    callback: function(){
       orderSummary.style.display = 'block';
     }
   });
   handler.openIframe();
 }
+
+//This function updates the items displayed in the order summary
 
 function upDateOrderSummary(){
     checkOut.style.display = 'none';
@@ -779,6 +765,7 @@ function upDateOrderSummary(){
 
 mainPage.addEventListener('click', displaySummaryOfSelectedItems);
 
+//This function displays the summary of selected items
 
 function displaySummaryOfSelectedItems() {
     
@@ -809,22 +796,16 @@ const nameErrorMessage = document.getElementById('name--error-message');
 const emailErrorMessage = document.getElementById('email--error-message');
 const phoneErrorMessage = document.getElementById('phone--error-message');
 
-const nameError = document.getElementById('name-error');
-const emailError = document.getElementById('email-error');
-const phoneError = document.getElementById('phone-error');
-
 const name = document.getElementById('name');
 const emailAddress = document.getElementById('email-address');
 const phoneNumber = document.getElementById('phone-number');
-
-let pattern = new RegExp(/[~`!#$%\^&*+=\-\[\]\\';,/{}|\\":<>\?]/);
-
 
 
 name.addEventListener('blur', formValidation);
 emailAddress.addEventListener('blur', formValidation);
 phoneNumber.addEventListener('blur', formValidation);
 
+//This function validates the form in the check out
 
 function formValidation() {
     
@@ -895,6 +876,9 @@ function formValidation() {
     
     
 }
+
+//This displays the name of the customer in the order summary
+
 
 let customerName = document.getElementById('customer-name');
 console.log(name.value);

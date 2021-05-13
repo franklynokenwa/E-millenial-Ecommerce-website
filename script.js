@@ -764,12 +764,14 @@ function upDateOrderSummary(){
 }
 
 mainPage.addEventListener('click', displaySummaryOfSelectedItems);
+mainPage.addEventListener('click', removeItemsFromOrderSummary);
+
 
 //This function displays the summary of selected items
 
 function displaySummaryOfSelectedItems() {
     
-    if ((event.target.id) == 'store-items1-button') {
+    if ((event.target.id) == '') {
         orderSummaryData1.style.display = 'flex';    
     }
     if ((event.target.id) == 'store-items2-button') {
@@ -786,6 +788,29 @@ function displaySummaryOfSelectedItems() {
     }
     if ((event.target.id) == 'store-items6-button') {
         orderSummaryData6.style.display = 'flex';       
+    }
+}
+
+
+function removeItemsFromOrderSummary() {
+    
+    if ((event.target.id) == 'remove-item1') {
+        orderSummaryData1.style.display = 'none';    
+    }
+    if ((event.target.id) == 'remove-item2') {
+        orderSummaryData2.style.display = 'none';       
+    }
+    if ((event.target.id) == 'remove-item3') {
+        orderSummaryData3.style.display = 'none';       
+    }
+    if ((event.target.id) == 'remove-item4') {
+        orderSummaryData4.style.display = 'none';       
+    }
+    if ((event.target.id) == 'remove-item5') {
+        orderSummaryData5.style.display = 'none';       
+    }
+    if ((event.target.id) == 'remove-item6') {
+        orderSummaryData6.style.display = 'none';       
     }
 }
 
